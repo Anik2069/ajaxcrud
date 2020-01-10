@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Bro</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+<h1 style="text-align: center">Welcome to Ajax</h1>
+<div class="container">
+    <div id="loaddata">
+        <h3 >THis things will be changed</h3>
+    </div>
+    <button id="btnclick">Click Me</button>
+</div>
+
+<!--<script type="text/javascript">
+    $(document).ready(function () {
+        $('#btnclick').click(function () {
+            $('#loaddata').load('load.html');
+        })
+        
+    });
+
+</script>-->
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#btnclick').click(function () {
+            $('#loaddata').load('load.html',function () {
+                alert("Waiting");
+            });
+        })
+
+    });
+
+</script>
+
+</body>
+</html>
